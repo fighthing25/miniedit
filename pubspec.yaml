@@ -1,0 +1,30 @@
+name: track_restorer
+description: Offline hiss removal, loudness mastering and metadata wipe for distribution-ready WAV exports.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The original ffmpeg_kit_flutter is discontinued and its native binaries were
+  # pulled from Maven Central, so fresh builds fail. This maintained fork keeps the
+  # same API; only the import prefix changes. Latest: `flutter pub add ffmpeg_kit_flutter_new`
+  ffmpeg_kit_flutter_new: ^3.2.0
+
+  file_picker: ^10.3.0
+  audioplayers: ^6.5.0
+  path_provider: ^2.1.5
+  permission_handler: ^12.0.0
+  path: ^1.9.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
